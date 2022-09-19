@@ -1,6 +1,6 @@
 # Connecting the client to GraphQL with Apollo client
 
-The blog-client is built by React (typescript) and [Graphql](https://graphql.org/code/#javascript-client).
+The blog-client is built by React (typescript) and [Graphql](https://graphql.org/code/#javascript-client).(This project depends on the [blog-server](https://github.com/mehradi-github/blog-server))
 
 ## Using Create React App
 
@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ```sh
 # Redux + TypeScript template
-npx create-react-app my-app --template redux-typescript
+npx create-react-app blog-client --template redux-typescript
 
 npm i -D eslint
 npm create @eslint/config

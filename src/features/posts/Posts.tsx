@@ -1,5 +1,6 @@
 import React, { FC, Fragment, ReactNode } from 'react';
 import { gql, useQuery } from '@apollo/client';
+import AppBar from '../appBar/AppBar';
 
 const GET_POSTS = gql`
   query Posts($take: Int!, $skip: Int!) {
@@ -23,6 +24,6 @@ const Posts: FC = () => {
   if (loading) return <div>Loading</div>;
   console.log(data);
 
-  return <div></div>;
+  return <div>Posts</div>;
 };
 export default Posts;

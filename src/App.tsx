@@ -1,21 +1,25 @@
-import React, { Fragment } from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import React, { FC, Fragment } from 'react';
+// import logo from './logo.svg';
+// import { Counter } from './features/counter/Counter';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import Posts from './features/posts/Posts';
+import Signup from './features/signup/Signup';
+import Signin from './features/signin/Signin';
+import Profile from './features/profile/Profile';
+import AppBar from './features/appBar/AppBar';
 
-function App() {
+const App: FC = () => {
   return (
-    // <Fragment>
-    //   <Routes>
-    //     <Route path="/posts" element={<Posts />} />
-    //     {/* <Route path="/posts" element={Signup} />
-    //     <Route path="/posts" element={Signin} />
-    //     <Route path="/posts" element={Profile} /> */}
-    //   </Routes>
-
-    //   {/* <div className="App">
+    <Fragment>
+      <AppBar />
+      <Routes>
+        <Route path="/posts" element={<Posts />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+      {/* <div className="App">
     //     <header className="App-header">
     //       <img src={logo} className="App-logo" alt="logo" />
     //       <Counter />
@@ -62,10 +66,8 @@ function App() {
     //       </span>
     //     </header>
     //   </div> */}
-
-    // </Fragment>
-    <Posts />
+    </Fragment>
   );
-}
+};
 
 export default App;
