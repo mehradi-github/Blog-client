@@ -12,7 +12,16 @@ npx create-react-app my-app --template redux-typescript
 
 npm i -D eslint
 npm create @eslint/config
-npm i -D prettier eslint-config-prettier
+npm i react-router-dom
+npm i -D prettier eslint-config-prettier @types/react-router-dom
 ```
 
 Learn more: [Install ESLint, Prettier, ESLint Plugin for Testing Library, ESLint Plugin for Jest DOM](https://github.com/mehradi-github/jest-rtl/)
+
+## Installing Apollo Client
+
+[Apollo Client](https://www.apollographql.com/docs/react/get-started) is a comprehensive state management library for JavaScript that enables you to manage both local and remote data with GraphQL. Use it to fetch, cache, and modify application data, all while automatically updating your UI.
+
+```sh
+npm i @apollo/client graphql
+```
