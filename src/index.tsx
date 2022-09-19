@@ -11,13 +11,29 @@ import {
   InMemoryCache,
   ApolloProvider,
   gql,
+  createHttpLink,
 } from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
+const httpLink = createHttpLink({
+  uri: 'http://localhost:8082/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  return {
+    headers: {
+      ...headers,
+      authorization:
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY2MzU5Mjc4NywiZXhwIjoxNjY3MTkyNzg3fQ.YNSi_pfvnhDoloL68I2LYgWBaA5kvM1Ym_utBjEZPMY',
+    },
+  };
+});
+
 const client = new ApolloClient({
-  uri: 'https://flyby-gateway.herokuapp.com/',
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 
