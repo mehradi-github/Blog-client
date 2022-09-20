@@ -1,16 +1,17 @@
 import React, { FC } from 'react';
+import { Alert } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const AppBar: FC = () => {
   return (
     <div>
-      <h1>
+      <Alert key="danger" variant="danger">
         You need to run The
         <a href="https://github.com/mehradi-github/blog-server" target="blank">
           <span> &quot;blog-server&quot;</span>
         </a>
-      </h1>
-
+      </Alert>
+      {/* 
       <h2>Menu:</h2>
       <ul>
         <li>
@@ -25,7 +26,7 @@ const AppBar: FC = () => {
         <li>
           <Link to="/profile">Profile</Link>
         </li>
-      </ul>
+      </ul>*/}
     </div>
   );
 };

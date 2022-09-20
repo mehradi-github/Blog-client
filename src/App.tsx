@@ -7,11 +7,13 @@ import Signup from './features/signup/Signup';
 import Signin from './features/signin/Signin';
 import Profile from './features/profile/Profile';
 import AppBar from './features/appBar/AppBar';
+import { Container } from 'react-bootstrap';
 
 const App: FC = () => {
   return (
-    <Fragment>
+    <Container>
       <AppBar />
+      <br />
       <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Signin />} />
@@ -64,7 +66,7 @@ const App: FC = () => {
     //       </span>
     //     </header>
     //   </div> */}
-    </Fragment>
+    </Container>
   );
 };
 

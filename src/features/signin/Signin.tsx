@@ -1,6 +1,7 @@
 import { gql, useMutation } from '@apollo/client';
 import React, { FC, useEffect, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 interface CredentialsInput {
   email: string;
@@ -23,7 +24,7 @@ const Signin: FC = () => {
   const [err, setErr] = useState(null);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [redirectPage, setRedirectPage] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
 
   const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -47,10 +48,12 @@ const Signin: FC = () => {
       }
       if (data.signin.token) {
         localStorage.setItem('token', data.signin.token);
-        navigate('/profile');
+        setIsLogin(true);
       }
     }
   }, [data]);
+
+  if (isLogin) navigate('/profile');
 
   return (
     <Form onSubmit={submitForm}>
@@ -79,6 +82,7 @@ const Signin: FC = () => {
       <Button variant="primary" type="submit">
         Submit
       </Button>
+      <Link to="/Signup"> Signup</Link>
       <Form.Text>{err && <p>{err}</p>}</Form.Text>
     </Form>
   );
