@@ -1,7 +1,7 @@
 import { gql, useQuery } from '@apollo/client';
 import React, { FC } from 'react';
 import { useParams } from 'react-router-dom';
-import AddPost from '../addPost/AddPost';
+import AddPostModal from '../addPost/AddPostModal';
 import Post from '../post/Post';
 
 const GET_PROFILE = gql`
@@ -54,7 +54,7 @@ const Profile: FC = () => {
           <h1>{profile.user.name}</h1>
           <p>{profile.bio}</p>
         </div>
-        <div>{profile.isMyProfile ? <AddPost /> : null}</div>
+        <div>{profile.isMyProfile ? <AddPostModal /> : null}</div>
       </div>
       <div>
         {profile.user.posts.map((post: any) => {

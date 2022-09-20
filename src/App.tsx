@@ -3,7 +3,6 @@ import React, { FC, Fragment } from 'react';
 // import { Counter } from './features/counter/Counter';
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
-import Posts from './features/posts/Posts';
 import Signup from './features/signup/Signup';
 import Signin from './features/signin/Signin';
 import Profile from './features/profile/Profile';
@@ -14,7 +13,6 @@ const App: FC = () => {
     <Fragment>
       <AppBar />
       <Routes>
-        <Route path="/posts" element={<Posts />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Signin />} />
         <Route path="/profile" element={<Profile />} />
