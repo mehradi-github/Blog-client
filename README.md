@@ -2,7 +2,7 @@
 
 The blog-client is built by React (typescript) and [Graphql](https://graphql.org/code/#javascript-client).(This project depends on the [blog-server](https://github.com/mehradi-github/blog-server))
 
-## Using Create React App
+## Installing Requirements
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit TS template](https://redux-toolkit.js.org/introduction/getting-started).
 
@@ -17,6 +17,19 @@ npm i -D prettier eslint-config-prettier @types/react-router-dom
 ```
 
 Learn more: [Install ESLint, Prettier, ESLint Plugin for Testing Library, ESLint Plugin for Jest DOM](https://github.com/mehradi-github/jest-rtl/)
+
+Installing react-bootstrap Official Site: [https://react-bootstrap.github.io/getting-started/introduction](https://react-bootstrap.github.io/getting-started/introduction)
+
+```sh
+npm i react-bootstrap bootstrap
+npm i -D @types/react-bootstrap @types/bootstrap
+```
+
+src/index.tsx
+
+```javascript
+import 'bootstrap/dist/css/bootstrap.min.css';
+```
 
 ## Installing Apollo Client
 

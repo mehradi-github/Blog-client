@@ -13,6 +13,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
