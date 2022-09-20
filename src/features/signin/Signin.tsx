@@ -1,6 +1,7 @@
 import { gql, useMutation } from '@apollo/client';
 import React, { FC, useEffect, useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 interface CredentialsInput {
   email: string;
   password: string;
@@ -16,11 +17,13 @@ const SINGIN = gql`
   }
 `;
 const Signin: FC = () => {
+  const navigate = useNavigate();
   const [signin, { data, error, loading }] = useMutation(SINGIN);
 
   const [err, setErr] = useState(null);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [redirectPage, setRedirectPage] = useState(false);
 
   const submitForm = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -44,6 +47,7 @@ const Signin: FC = () => {
       }
       if (data.signin.token) {
         localStorage.setItem('token', data.signin.token);
+        navigate('/profile');
       }
     }
   }, [data]);

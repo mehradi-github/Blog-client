@@ -16,7 +16,7 @@ const App: FC = () => {
       <Routes>
         <Route path="/posts" element={<Posts />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/signin" element={<Signin />} />
+        <Route path="/" element={<Signin />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
       {/* <div className="App">

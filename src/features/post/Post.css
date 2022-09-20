@@ -1,0 +1,24 @@
+.Post {
+  background-color: blueviolet;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  position: relative;
+}
+
+.Post__publish {
+  position: absolute;
+  right: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.Post__header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Post__header-container h4 {
+  padding-top: 1rem;
+  font-size: 0.8rem;
+}
