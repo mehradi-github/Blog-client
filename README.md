@@ -4,7 +4,7 @@ The blog-client is built by React (typescript) and [Graphql](https://graphql.org
 
 ## Installing Requirements
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit TS template](https://redux-toolkit.js.org/introduction/getting-started).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [TS template](https://redux-toolkit.js.org/introduction/getting-started).
 
 ```sh
 # Redux + TypeScript template
